@@ -19,22 +19,79 @@ Select ONE Additional Feature to Add
 <head>
   <title>Project: Recipe book</title>
   <meta charset="utf-8">
-  <style>
-  </style>
+   <style>
+          table, th, td {
+            border: 1px solid; border: solid rgb(0, 0, 0);
+          }
+          .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-back {
+  background-color: orange;
+  color: white;
+  transform: rotateY(180deg);
+}
+img {
+  border-radius: 8px;
+}
+
+        </style>
 </head>
 
 <body>
 
-  <h1>____'s Recipe Book</h1>
+  <h1>Sophia's Recipe Book</h1>
 
-  <h2>Contents:</h2>
+  <h2>Pumpkins:</h2>
+  <p>After Halloween a lot of people are left with carved pumpkins that just sit their and rot but you can turn that pumpkin into so many things.</p>
 
   <ol>
-    <li><a href="?">Recipe #1</a></li>
+    <li><a href="?">Pumpkin Seeds</a></li>
+    <li>Pumpkin Puree</li>
   </ol>
 
   <h2 id="?">Recipe #1</h2>
-
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://www.allrecipes.com/thmb/cGlGVq27gyOro7U5t1Lc1XTY0U4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/22935-pumpkin-puree-VAT-Beauty-4x3-275b1d5ee67745ad8a4c298e8078cc09.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Pumpkin Puree</h1>
+      <p></p>
+    </div>
+  </div>
+</div>
   <ul>
     <li>Time: _</li>
     <li>Serves: _</li>
